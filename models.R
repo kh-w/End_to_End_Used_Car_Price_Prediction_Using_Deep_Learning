@@ -89,27 +89,38 @@ input_dim <- dim(dat_nn$train$x)[2]
 
 # model
 
-callmodel <- function(){
+callmodel <- function(layer1,layer2){
   model <- keras_model_sequential() %>%
-    layer_dense(units = 64, activation = "relu", input_shape = input_dim) %>%
-    layer_dense(units = 64, activation = "relu") %>%
+    layer_dense(units = layer1, activation = "relu", input_shape = input_dim) %>%
+    layer_dense(units = layer2, activation = "relu") %>%
     layer_dense(units = 1)
   model %>% compile(optimizer = "rmsprop",
                     loss = "mse",
                     metrics = "mae")
 }
 
-model <- callmodel()
+getmae <- function(layer){
+  layer1 <- layer[1]
+  layer2 <- layer[2]
+  # model fit
+  model <- callmodel(layer1,layer2)
+  model %>% fit(dat_nn$train$x, 
+                dat_nn$train$y, 
+                validation_data = list(dat_nn$test$x, 
+                                       dat_nn$test$y),
+                epochs = 15, batch_size = 5)
+  
+  # result
+  results <- model %>% evaluate(dat_nn$test$x, dat_nn$test$y)
+  results["mae"]
+}
 
-# model fit
+tuneGrid <- expand.grid(layer1=c(16,32,64,128,256),layer2=c(16,32,64,128,256),val_mae=NA)
 
-model %>% fit(dat_nn$train$x, 
-              dat_nn$train$y, 
-              validation_data = list(dat_nn$test$x, 
-                                     dat_nn$test$y),
-              epochs = 20, batch_size = 5)
-
-# result
-results <- model %>% evaluate(dat_nn$test$x, dat_nn$test$y)
+for (i in 1:nrow(tuneGrid)){
+  tuneGrid[i,"val_mae"] <- getmae(tuneGrid[i,c("layer1","layer2")])
+}
 
 ########################################################################################
+
+summary(train)
