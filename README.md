@@ -1,2 +1,5 @@
-# used_car_pricing
-Predictive modeling - Estimate used car prices 
+# Used Car Pricing
+
+Given the information of a used car:
+
+![Summary of variables](variables_summary.png)
