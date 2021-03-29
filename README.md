@@ -7,3 +7,5 @@ Given the information of a used car, the price can be estimated by a deep neural
 ![Summary of variables](variables_summary.png)
 
 The model is a 2-layer densely connected network. The number of nodes in each layer is found by using the tuneGrid below:
+
+![tuneGrid of 2-layer densely connected network](tuneGrid.png)
