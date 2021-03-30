@@ -7,7 +7,7 @@ In this project, I did:
 - Built and cleaned up the dataset
 - Apply deep learning regression in R for estimation
 
-# Used Car Pricing - Deep Neural Network
+# Used Car Pricing - Deep Neural Network 
 
 This project focused on used car pricing below $20000 offering. Due to the limitation of dataset building, the brands were limited to Toyota, Honda, Mitsubishi, Hyundai, Kia and Subaru. Although the data used was publicly available, the dataset built in this project was solely for academic and research purposes, it did not, will not and should not be used in any businesses.
 
