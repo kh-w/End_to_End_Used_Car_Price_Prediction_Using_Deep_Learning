@@ -19,12 +19,12 @@ The dataset has the following variables:
 
 # Model and results
 
-The price of an used car could be estimated by a deep neural network. The model was a 2-layer densely connected network. The number of nodes in each layer was found by using the tuneGrid below:
+The price of an used car could be estimated by a deep neural network. The model was a 2-layer densely connected network. The number of nodes in each layer was found by using the tuneGrid below. Noted that the models were sorted by the mean absolute error (mae) of the model on the hold-out validation dataset.
 
 ![tuneGrid of 2-layer densely connected network](tuneGrid.png)
 
-In the tuneGrid, the models were sorted by mean absolute error (mae) of the model on the hold-out validation dataset. The best performance was from a 2-layer model with 128 nodes on the first hidden layer, and 256 nodes on the second hidden layer. The mae is $1505.98. This range, ±$1500, was reasonable because it was quite common that a few thousands dollars discount appeared on some used car if the listing was long enough.
+The best performance was from a 2-layer model with 128 nodes on the first hidden layer, and 256 nodes on the second hidden layer. The mae is $1505.98. 
 
 # Conclusion
 
-From used car dealers' point of view, this mae could provide insight on what is the reasonable price range for a certain car if the car condition is unknown. They could list the car using the ceiling of this price range. From indiviudal sellers' point of view, this price range could provide insight on how much the car dealer is going to list their cars. This insight could be a useful reference to get a good deal.
+This range of error, ±$1500, was reasonable because it was quite common that a few thousands dollars discount appeared on some used car if the listing was long enough. From used car dealers' point of view, this mae could provide insight on what is the reasonable price range for a certain car if the car condition is unknown. They could list the car using the ceiling of this price range. From indiviudal sellers' point of view, this price range could provide insight on how much the car dealer is going to list their cars. This insight could be a useful reference to get a good deal.
