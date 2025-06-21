@@ -1,4 +1,6 @@
-# About this project
+- [Introduction](!introduction)
+
+# Introduction
 
 The goal of this project was to estimate used car prices under $20,000.
 
