@@ -1,11 +1,11 @@
 # About this project
 
-The goal of this project was to estimate used car prices.
+The goal of this project was to estimate used car prices under $20,000.
 
 In this project, I did:
-- Web scaping using Python and R
-- Built and cleaned up the dataset
-- Apply deep learning regression in R for estimation
+- Web scaping using Python on cars.com using gentle methods, i.e. web scrape slowly to avoid sudden traffic for the website. The dataset obtained is solely for academic purposes.
+- Performed data cleaning including remove blank rows, typo fixing and data pre-processing including create color tunes as a bigger grouping for exterior/interior colors, create word embedding for categorical variables with large number of categories.
+- Built and fine-tuned deep neural network to price used cars.
 
 # Used Car Pricing - Deep Neural Network 
 
