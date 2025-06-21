@@ -7,15 +7,12 @@ In this project, I did:
 - Performed data cleaning including remove blank rows, typo fixing and data pre-processing including create color tunes as a bigger grouping for exterior/interior colors, create word embedding for categorical variables with large number of categories.
 - Built and fine-tuned deep neural network to price used cars.
 
-# Used Car Pricing - Deep Neural Network 
-
-This project focused on used car pricing below $20000 offering. Due to the limitation of dataset building, the brands were limited to Toyota, Honda, Mitsubishi, Hyundai, Kia and Subaru. Although the data used was publicly available, the dataset built in this project was solely for academic and research purposes, it did not, will not and should not be used in any businesses.
-
 # Dataset
 
-The dataset has the following variables:
+Disclaimer: Although the data used was publicly available, it is prohibited to use the dataset for any business purposes. Therefore, the data used in this project was solely for academic and research purposes, it did not, will not and should not be used in any businesses.
 
-![Summary of variables](variables_summary.png)
+This project focused on used car pricing below $20,000 offering. Since I am web scrapping, the size of the dataset should be limited. The brands were limited to Toyota, Honda, Mitsubishi, Nissan, Maxda and Subaru, and the area I used is 500 miles from 60126 zipcode. The predictors I collected from each car are: ["make", "year", "trim", "model", "stock_type", "fuel_type", "bodystyle", "photo_count", "exterior_color", "interior_color", "drivetrain", "fuel_type", "transmission", "engine", "mileage", "accidents_or_damage", "clean_title", "one_owner_vehicle", "personal_use_only", "open_recall", "comfort_rating", "interior_rating", "performance_rating", "value_rating", "exterior_rating", "reliability_rating", "singleurl", "price"].
+
 
 # Model and results
 
