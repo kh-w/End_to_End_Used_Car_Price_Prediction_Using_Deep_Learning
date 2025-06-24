@@ -1,4 +1,7 @@
 - [Introduction](#introduction)
+- [Dataset](#dataset)
+  - [Data_Cleaning](#data_cleaning)
+  - [Data_Preprocessing](#data_preprocessing)
 
 # Introduction
 
@@ -17,13 +20,13 @@ This project focused on used car pricing below $20,000 offering. Since I am web 
 
 The data was raw, i.e. include blank rows, missing values, granular categories, spelling differences of the same category, etc, such that data cleaning and preprocessing are needed. 
 
-## Data Cleaning
+## Data_Cleaning
 
-The dataset was built gradually over several days using gentle scraping, which led to the appearance of some blank rows as certain car listings were removed during the process. Additionally, some listings had missing data—for example, certain ratings might be unavailable. To address this, we searched for the same model to fill in the missing values; if no such ratings were found, we imputed the blanks with the average rating. Furthermore, some categories had multiple names (e.g., “4WD” and “4-Wheel-Drive”), which were manually grouped for consistency.
+The dataset was compiled gradually over several days using a gentle scraping method, which led to the presence of some blank rows as certain car listings were removed during the process. Additionally, some listings contained missing values, for example: certain ratings were occasionally unavailable. To address this, we searched for other listings in the dataset of the same model to fill in the missing data; if no matching records were found, the missing values were filled using average ratings. Inconsistent naming across categorical variables (e.g., "AWD" vs. "All-Wheel-Drive") was resolved through manual standardization. Missing values in categorical features were replaced with a default category such as "Unknown". During this step, some granular categories such as interior/exterior colors and transmission types—were also consolidated for improved consistency.
 
-## Data Preprocessing
+## Data_Preprocessing
 
-Some categories are very granular, e.g. there are 1199 different engines across all cars. 
+Continuous (numerical) variables will be normalized before being fed into the model. Categorical features with a limited number of distinct values will be integer-encoded. For highly granular categorical features—such as engine (1,199 unique descriptions), trim (609 variations), and model (194 types)—word embeddings will be used to capture semantic relationships and reduce dimensionality.
 
 # Model and results
 
