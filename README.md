@@ -1,6 +1,7 @@
 - [Introduction](#introduction)
 - [Dataset](#dataset)
   - [Data_Cleaning](#data_cleaning)
+  - [Data_Visualization](#data_visualization)
   - [Data_Preprocessing](#data_preprocessing)
 
 # Introduction
@@ -10,6 +11,7 @@ The goal of this project was to estimate used car prices under $20,000.
 In this project, I did:
 - Web scaping using Python on cars.com using gentle methods, i.e. web scrape slowly to avoid sudden traffic for the website. The dataset obtained is solely for academic purposes.
 - Performed data cleaning including remove blank rows, typo fixing and data pre-processing including create color tunes as a bigger grouping for exterior/interior colors, create word embedding for categorical variables with large number of categories.
+- Visualized the dataset.
 - Built and fine-tuned deep neural network to price used cars.
 
 # Dataset
@@ -23,6 +25,8 @@ The data was raw, i.e. include blank rows, missing values, granular categories, 
 ## Data_Cleaning
 
 The dataset was compiled gradually over several days using a gentle scraping method, which led to the presence of some blank rows as certain car listings were removed during the process. Additionally, some listings contained missing values, for example: certain ratings were occasionally unavailable. To address this, we searched for other listings in the dataset of the same model to fill in the missing data; if no matching records were found, the missing values were filled using average ratings. Inconsistent naming across categorical variables (e.g., "AWD" vs. "All-Wheel-Drive") was resolved through manual standardization. Missing values in categorical features were replaced with a default category such as "Unknown". During this step, some granular categories such as interior/exterior colors and transmission types—were also consolidated for improved consistency.
+
+## Data_Visualization
 
 ## Data_Preprocessing
 
