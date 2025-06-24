@@ -6,13 +6,7 @@
 
 # Introduction
 
-The goal of this project was to estimate used car prices under $20,000.
-
-In this project, I did:
-- Web scaping using Python on cars.com using gentle methods, i.e. web scrape slowly to avoid sudden traffic for the website. The dataset obtained is solely for academic purposes.
-- Performed data cleaning including remove blank rows, typo fixing and data pre-processing including create color tunes as a bigger grouping for exterior/interior colors, create word embedding for categorical variables with large number of categories.
-- Visualized the dataset.
-- Built and fine-tuned deep neural network to price used cars.
+The goal of this project was to estimate used car prices under $20,000. I began by collecting data through web scraping from cars.com using respectful, low-frequency requests to avoid overloading the site’s servers. The dataset, intended solely for academic purposes, was then cleaned and preprocessed—this included removing blank rows, correcting typos, and engineering features such as grouping interior and exterior colors into broader color tones. For high-cardinality categorical variables like trim or engine descriptions, I applied word embedding techniques to capture semantic relationships. I also conducted exploratory data visualization to better understand the distribution and relationships within the dataset. Finally, I built and fine-tuned a deep neural network to predict car prices, optimizing its performance through validation and model tuning.
 
 # Dataset
 
