@@ -25,6 +25,17 @@ After data cleaning, the dataset contains 25 predictors across 30,189 car listin
 
 ## Data_Visualization
 
+Pair plots of continuous variables: ['price', 'mileage', 'year', 'photo_count', 'comfort_rating', 'interior_rating', 'performance_rating', 'value_rating', 'exterior_rating', 'reliability_rating']. The plots suggest that the predictor variables are suitable for preprocessing via normalization. Additionally, the scatterplots indicate that the rating variables are moderately correlated with the listing price.
+<img src="https://github.com/user-attachments/assets/20b18bf3-64f3-49ae-8caf-a7e962f13d2b" alt="Untitled" width="450"/>
+<img src="https://github.com/user-attachments/assets/9e2c056b-56bc-4cae-b82f-0642c2129d7d" alt="Untitled" width="500"/>
+As a follow-up to the scatterplots, the correlation heatmap above highlights that mileage and year are also significantly correlated with the listing price—relationships that were less visually apparent in the scatterplots.
+
+The plot of mileage versus price is color-coded by any two makes of — Toyota, Honda, Subaru, and Nissan — which are the most represented in the dataset. 
+![image](https://github.com/user-attachments/assets/28a1f9ca-d09d-46e7-9873-714cf6bac934)
+Similarly, year versus price:
+![image](https://github.com/user-attachments/assets/b8fa5ed4-a442-4cd2-9d0f-b099e5edc326)
+The two graphs above show that Toyota and Honda tend to have older vehicles—with higher mileage or age—priced similarly to newer or less-used cars from other brands. This suggests stronger overall demand for these makes, likely due to their reputation for reliability.
+
 
 
 ## Data_Preprocessing
