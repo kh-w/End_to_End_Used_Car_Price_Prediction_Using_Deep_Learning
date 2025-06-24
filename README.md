@@ -36,11 +36,13 @@ Similarly, year versus price:
 ![image](https://github.com/user-attachments/assets/b8fa5ed4-a442-4cd2-9d0f-b099e5edc326)
 The two graphs above show that Toyota and Honda tend to have older vehicles—with higher mileage or age—priced similarly to newer or less-used cars from other brands. This suggests stronger overall demand for these makes, likely due to their reputation for reliability.
 
+Categorical variables versus price can be explored by boxplots, along with their counts in the dataset.
+![Untitled](https://github.com/user-attachments/assets/1d354e5b-d00e-44e7-9395-46bb27ed0920)
 
 
 ## Data_Preprocessing
 
-Continuous (numerical) variables will be normalized before being fed into the model. Categorical features with a limited number of distinct values will be integer-encoded. For highly granular categorical features—such as engine (1,199 unique descriptions), trim (609 variations), and model (194 types)—word embeddings will be used to capture semantic relationships and reduce dimensionality.
+Continuous (numerical) variables will be normalized before being fed into the model. Categorical features with a limited number of distinct values will be integer-encoded. For highly granular categorical features—such as engine (1,199 unique descriptions), trim (609 variations), and model (194 types)—word embeddings will be used to capture semantic relationships and reduce dimensionality (compared to one-hot encoding).
 
 # Model and results
 
