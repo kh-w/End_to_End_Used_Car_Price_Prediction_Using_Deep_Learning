@@ -27,9 +27,11 @@ After data cleaning, the dataset contains 25 predictors across 30,195 car listin
 
 ## Data_Cleaning
 
-The dataset was compiled gradually over several days using a gentle scraping method, which led to the presence of some blank rows as certain car listings were removed during the process. Additionally, some listings contained missing values, for example: certain ratings were occasionally unavailable. To address this, we searched for other listings in the dataset of the same model to fill in the missing data; if no matching records were found, the missing values were filled using average ratings. Inconsistent naming across categorical variables (e.g., "AWD" vs. "All-Wheel-Drive") was resolved through manual standardization. Missing values in categorical features were replaced with a default category such as "Unknown". During this step, some granular categories such as interior/exterior colors and transmission types—were also consolidated for improved consistency.
+The dataset was compiled gradually over several days using a gentle scraping method, which led to the presence of some blank rows as certain car listings were removed during the process. Additionally, some listings contained missing values, for example: certain ratings were occasionally unavailable. To address this, we searched for other listings in the dataset of the same model to fill in the missing data; if no matching records were found, the missing values were filled using average ratings. Inconsistent naming across categorical variables (e.g., "AWD" vs. "All-Wheel-Drive") was resolved through manual standardization. Missing values in categorical features were replaced with a default category such as "Unknown". During this step, some granular categories such as interior/exterior colors and transmission types—were also consolidated for improved consistency. Listings with rare attributes—such as pink exterior color or double-clutch transmission—were also removed to avoid issues during train/test splitting.
 
 ## Data_Visualization
+
+
 
 ## Data_Preprocessing
 
