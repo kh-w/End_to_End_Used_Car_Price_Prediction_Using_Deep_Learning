@@ -23,6 +23,7 @@ This project focused on used car pricing below $20,000 offering. Since I am web 
 The data was raw, i.e. include blank rows, missing values, granular categories, spelling differences of the same category, etc, such that data cleaning and preprocessing are needed. 
 
 After data clean up, the dataset has 25 predictors of 30,195 listings:
+![image](https://github.com/user-attachments/assets/30781b46-f840-42d1-878f-4053f81dff88)
 
 ## Data_Cleaning
 
