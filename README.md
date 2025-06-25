@@ -15,9 +15,8 @@
             <li><a href="#data_preprocessing">Data_Preprocessing</a></li>
           </ul>
         </li>
-        <li>
-          <li><a href="#dodel_and_results">Model_and_results</a></li>
-        </li>
+        <li><a href="#model_and_results">Model_and_Results</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
       </ul>
     </td>
     <td>
@@ -75,7 +74,7 @@ A Keras Tokenizer was used to convert the free-text descriptions in the 'engine'
 Here is an example of 10 'engine' values before and after word embedding:
 ![image](https://github.com/user-attachments/assets/f6624892-3f9e-411f-85e0-034d6975e040)
 
-# Model_and_results
+# Model_and_Results
 
 The model is a multi-input regression neural network designed to predict a continuous target, i.e. listing price, based on a set of categorical and numerical features. Categorical inputs such as make, model, fuel type, drivetrain, and others are passed through embedding layers to convert each discrete category into dense vector representations. Some features like trim, engine, and model accept multiple tokens and are embedded as sequences. These embeddings are flattened and concatenated with normalized numerical inputs like year, mileage, and user ratings (comfort, performance, reliability, value, exterior, interior). The resulting concatenated feature vector with length 233 is fed through 3 fully connected layers with 64, 64, and 32 neurons respectively, each using ReLU activation. Finally, a single neuron with linear activation produces the regression output. With approximately 46,000 parameters, this model effectively predicted car prices with Mean Absolute Error $1,759.90. The average of car prices is $13,665.27, therefore the error is roughly 13% of the average price. The R² is 0.73 which means 73% of the variability of the listing price can be explained through the available predictors under this model.
 
