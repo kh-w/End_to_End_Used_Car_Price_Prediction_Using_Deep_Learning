@@ -80,3 +80,10 @@ The model is a multi-input regression neural network designed to predict a conti
 
 # Conclusion
 
+This project successfully developed a deep learning regression model to estimate used car prices under $20,000 based on a dataset collected via web scraping. After thorough data cleaning, preprocessing, and exploratory analysis, the model leveraged a combination of normalized numerical features and word-embedded categorical variables to capture complex relationships within the data.
+
+The model achieved a Mean Absolute Error (MAE) of $1,759.90, which corresponds to about 13% of the average car price ($13,665). The R² score of 0.73 indicates that the model explains 73% of the variance in used car prices, demonstrating strong predictive performance given the complexity and variability inherent in used car markets.
+
+These results suggest that embedding techniques for high-cardinality categorical features, combined with a multi-input neural network architecture, are effective strategies for modeling real-world pricing data. However, there remains room for improvement, especially in reducing prediction error further and capturing more subtle market dynamics.
+
+Future work could explore incorporating additional external factors (for example: geographic trends, economic indicators), refining feature engineering, and experimenting with more advanced architectures or ensemble methods to enhance accuracy and robustness.
