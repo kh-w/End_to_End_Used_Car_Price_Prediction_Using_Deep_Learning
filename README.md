@@ -3,7 +3,7 @@
 <table>
   <tr>
     <td>
-      <img src="https://github.com/user-attachments/assets/8ebde101-a2a8-47a3-9927-1b8fe80790d9" alt="Cover" width="300"/>
+      <img src="https://github.com/user-attachments/assets/ed846c3e-da44-44b2-9610-68b67e3d1eda" alt="Cover1" width="300"/>
     </td>
     <td>
       <ul>
@@ -16,6 +16,9 @@
           </ul>
         </li>
       </ul>
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/8ebde101-a2a8-47a3-9927-1b8fe80790d9" alt="Cover2" width="300"/>
     </td>
   </tr>
 </table>
