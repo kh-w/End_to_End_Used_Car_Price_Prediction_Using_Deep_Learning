@@ -48,8 +48,10 @@ After data cleaning, the dataset contains 25 predictors across 30,189 car listin
 ## Data_Visualization
 
 Pair plots of continuous variables: ['price', 'mileage', 'year', 'photo_count', 'comfort_rating', 'interior_rating', 'performance_rating', 'value_rating', 'exterior_rating', 'reliability_rating']. The plots suggest that the predictor variables are suitable for preprocessing via normalization. Additionally, the scatterplots indicate that the rating variables are moderately correlated with the listing price.
+
 <img src="https://github.com/user-attachments/assets/20b18bf3-64f3-49ae-8caf-a7e962f13d2b" alt="Untitled" width="450"/>
 <img src="https://github.com/user-attachments/assets/9e2c056b-56bc-4cae-b82f-0642c2129d7d" alt="Untitled" width="500"/>
+
 As a follow-up to the scatterplots, the correlation heatmap above highlights that mileage and year are also significantly correlated with the listing price—relationships that were less visually apparent in the scatterplots.
 
 The plot of mileage versus price is color-coded by any two makes of — Toyota, Honda, Subaru, and Nissan — which are the most represented in the dataset. 
