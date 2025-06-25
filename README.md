@@ -43,7 +43,10 @@ Categorical variables versus price can be explored by boxplots, along with their
 
 ## Data_Preprocessing
 
-Continuous (numerical) variables will be normalized before being fed into the model. Categorical features with a limited number of distinct values will be integer-encoded. For high-cardinality categorical features — such as engine (1,199 unique descriptions), trim (609 variations), and model (194 types) — word embeddings will be used to capture semantic relationships and reduce dimensionality (compared to one-hot encoding).
+Continuous (numerical) variables will be normalized before being fed into the model. Categorical features with low-cardinality will be integer-encoded. For high-cardinality categorical features — such as engine (1,199 unique descriptions), trim (609 variations), and model (194 types) — word embeddings will be used to capture semantic relationships and reduce dimensionality (compared to one-hot encoding).
+
+Low-cardinality categorical features before and after integer-encoding:
+![image](https://github.com/user-attachments/assets/ce75fe79-fb3a-48e9-b0e1-c980c561b4be)
 
 A Keras Tokenizer was used to convert the free-text descriptions in the 'engine' column into numerical sequences suitable for input into a deep learning model. The tokenizer was configured with a vocabulary limit of the 1,000 most frequent tokens (num_words=1000) and an out-of-vocabulary token (<OOV>) to handle rare or unseen words during inference. After fitting the tokenizer on the training data, the engine descriptions were transformed into sequences of integers representing the word indices. These sequences were then padded to a fixed length for uniform input shape.
 
