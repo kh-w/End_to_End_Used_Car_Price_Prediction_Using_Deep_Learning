@@ -36,7 +36,7 @@ Similarly, year versus price:
 ![image](https://github.com/user-attachments/assets/b8fa5ed4-a442-4cd2-9d0f-b099e5edc326)
 The two graphs above show that Toyota and Honda tend to have older vehicles—with higher mileage or age—priced similarly to newer or less-used cars from other brands. This suggests stronger overall demand for these makes, likely due to their reputation for reliability.
 
-Categorical variables versus price can be explored by boxplots, along with their counts in the dataset.
+Categorical variables versus price can be explored by boxplots, along with their counts in the dataset. The count plots provide a quick overview of category distributions, helping to spot any irregularities or dominant patterns in the data. When a category appears infrequently, any unusual patterns it shows may be insignificant in the context of the entire dataset.
 ![Untitled](https://github.com/user-attachments/assets/1d354e5b-d00e-44e7-9395-46bb27ed0920)
 
 
