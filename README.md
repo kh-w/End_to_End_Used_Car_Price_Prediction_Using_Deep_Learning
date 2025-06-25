@@ -84,12 +84,41 @@ Here is an example of 10 'engine' values before and after word embedding:
 # Model_and_Results
 
 ## Gradient_Boosted_Trees
-This Gradient Boosting Regressor model builds an ensemble of 1000 decision trees, each with a maximum depth of 6, and uses a learning rate of 0.01 to incrementally correct errors. Each tree partitions the feature space and fits simple piecewise constant functions. By combining many trees, GBTs can approximate complex, nonlinear functions — including the true regression function (Bayesian optimal regressor) $f(x)=E[Y|X=x]$ — with arbitrary accuracy given enough trees and data. Using 25,189 car listings as training data, the training resulted with Root Mean Squared Error $1,570.90. The prediction on the remaining 5,000 car listings, the Root Mean Squared Error is $1,488.21, along with Mean Absolute Error $1,151.29.
+This Gradient Boosting Regressor model builds an ensemble of 1000 decision trees, each with a maximum depth of 6, and uses a learning rate of 0.01 to incrementally correct errors. Each tree partitions the feature space and fits simple piecewise constant functions. By combining many trees, GBTs can approximate complex, nonlinear functions — including the true regression function (Bayesian optimal regressor) $f(x)=E[Y|X=x]$ — with arbitrary accuracy given enough trees and data. Using 25,189 car listings as training data, the training resulted with Root Mean Squared Error $1,570.90. The prediction on the remaining 5,000 car listings, the Root Mean Squared Error is $1,488.21, along with Mean Absolute Error $1,151.29. The $R^2$ is 0.89 which means 89% of the variability of the listing price can be explained through this model.
 
 ## Deep_Neural_Network
-The model is a multi-input regression deep neural network designed to predict a continuous target, i.e. listing price, based on a set of categorical and numerical features. Categorical inputs such as make, model, fuel type, drivetrain, and others are passed through embedding layers to convert each discrete category into dense vector representations. Some features like trim, engine, and model accept multiple tokens and are embedded as sequences. These embeddings are flattened and concatenated with normalized numerical inputs like year, mileage, and user ratings (comfort, performance, reliability, value, exterior, interior). The resulting concatenated feature vector with length 233 is fed through 3 fully connected layers with 64, 64, and 32 neurons respectively, each using ReLU activation. Finally, a single neuron with linear activation produces the regression output. With approximately 46,000 parameters, this model effectively predicted car prices with Mean Absolute Error $1,759.90. The average of car prices is $13,665.27, therefore the error is roughly 13% of the average price. The R² is 0.73 which means 73% of the variability of the listing price can be explained through the available predictors under this model.
+While a Gradient Boosting Regressor can achieve near-optimal performance, it may become computationally impractical on extremely large datasets. In such cases, a Deep Neural Network — though requiring more careful feature preprocessing — can offer greater scalability and efficiency.
+
+This model is a multi-input regression deep neural network designed to predict a continuous target, i.e. listing price, based on a set of categorical and numerical features. Categorical inputs such as make, model, fuel type, drivetrain, and others are passed through embedding layers to convert each discrete category into dense vector representations. Some features like trim, engine, and model accept multiple tokens and are embedded as sequences. These embeddings are flattened and concatenated with normalized numerical inputs like year, mileage, and user ratings (comfort, performance, reliability, value, exterior, interior). The resulting concatenated feature vector with length 233 is fed through 3 fully connected layers with 64, 64, and 32 neurons respectively, each using ReLU activation. Finally, a single neuron with linear activation produces the regression output. With approximately 46,000 parameters, this model effectively predicted car prices with Root Mean Squared Error $2,247.87 and Mean Absolute Error $1,759.90. The $R^2$ is 0.73. 
 
 ![image](https://github.com/user-attachments/assets/07525732-6c2c-4430-ba15-6e42b8626428)
+
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>$R^2$</th>
+      <th>MAE</th>
+      <th>RMSE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Gradient Boosting Regressor</td>
+      <td>0.89</td>
+      <td>$1,151.29</td>
+      <td>$1,488.21</td>
+    </tr>
+    <tr>
+      <td>Deep Neural Network</td>
+      <td>0.73</td>
+      <td>$1,759.90</td>
+      <td>$2,247.87</td>
+    </tr>
+  </tbody>
+</table>
+
+Given the average of car prices is $13,665.27, both models performed reasonably well. 
 
 # Conclusion
 
