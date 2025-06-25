@@ -1,9 +1,25 @@
 # Content
-- [Introduction](#introduction)
-- [Dataset](#dataset)
-  - [Data_Cleaning](#data_cleaning)
-  - [Data_Visualization](#data_visualization)
-  - [Data_Preprocessing](#data_preprocessing)
+
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/8ebde101-a2a8-47a3-9927-1b8fe80790d9" alt="Cover" width="300"/>
+    </td>
+    <td>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#dataset">Dataset</a>
+          <ul>
+            <li><a href="#data_cleaning">Data_Cleaning</a></li>
+            <li><a href="#data_visualization">Data_Visualization</a></li>
+            <li><a href="#data_preprocessing">Data_Preprocessing</a></li>
+          </ul>
+        </li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
 
 # Introduction
 
