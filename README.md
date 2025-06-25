@@ -15,7 +15,12 @@
             <li><a href="#data_preprocessing">Data_Preprocessing</a></li>
           </ul>
         </li>
-        <li><a href="#model_and_results">Model_and_Results</a></li>
+        <li><a href="#model_and_results">Model_and_Results</a>
+          <ul>
+            <li><a href="#gradient_boosted_trees">Gradient_Boosted_Trees</a></li>
+            <li><a href="#deep_neural_network">Deep_Neural_Network</a></li>
+          </ul>
+        </li>
         <li><a href="#conclusion">Conclusion</a></li>
       </ul>
     </td>
@@ -79,12 +84,7 @@ Here is an example of 10 'engine' values before and after word embedding:
 # Model_and_Results
 
 ## Gradient_Boosted_Trees
-This Gradient Boosting Regressor model builds an ensemble of 1000 decision trees, each with a maximum depth of 6, and uses a learning rate of 0.01 to incrementally correct errors. Each tree partitions the feature space and fits simple piecewise constant functions. By combining many trees, GBTs can approximate complex, nonlinear functions — including the true regression function (Bayesian optimal regressor) $f(x)=E[Y|X=x]$ — with arbitrary accuracy given enough trees and data. Using 25,189 car listings as training data, the training resulted with Root Mean Squared Error $1,570.90:
-![image](https://github.com/user-attachments/assets/04d192a2-e343-40f8-ab86-6b2b814aaacb)
-
-Prediction on the remaining 5,000 car listings, the Root Mean Squared Error is $1,488.21, along with Mean Absolute Error $1,151.29.
-![image](https://github.com/user-attachments/assets/c3ec256c-73f0-4ecb-8195-ddeb6120eb6d)
-
+This Gradient Boosting Regressor model builds an ensemble of 1000 decision trees, each with a maximum depth of 6, and uses a learning rate of 0.01 to incrementally correct errors. Each tree partitions the feature space and fits simple piecewise constant functions. By combining many trees, GBTs can approximate complex, nonlinear functions — including the true regression function (Bayesian optimal regressor) $f(x)=E[Y|X=x]$ — with arbitrary accuracy given enough trees and data. Using 25,189 car listings as training data, the training resulted with Root Mean Squared Error $1,570.90. The prediction on the remaining 5,000 car listings, the Root Mean Squared Error is $1,488.21, along with Mean Absolute Error $1,151.29.
 
 ## Deep_Neural_Network
 The model is a multi-input regression deep neural network designed to predict a continuous target, i.e. listing price, based on a set of categorical and numerical features. Categorical inputs such as make, model, fuel type, drivetrain, and others are passed through embedding layers to convert each discrete category into dense vector representations. Some features like trim, engine, and model accept multiple tokens and are embedded as sequences. These embeddings are flattened and concatenated with normalized numerical inputs like year, mileage, and user ratings (comfort, performance, reliability, value, exterior, interior). The resulting concatenated feature vector with length 233 is fed through 3 fully connected layers with 64, 64, and 32 neurons respectively, each using ReLU activation. Finally, a single neuron with linear activation produces the regression output. With approximately 46,000 parameters, this model effectively predicted car prices with Mean Absolute Error $1,759.90. The average of car prices is $13,665.27, therefore the error is roughly 13% of the average price. The R² is 0.73 which means 73% of the variability of the listing price can be explained through the available predictors under this model.
